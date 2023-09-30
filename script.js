@@ -39,8 +39,38 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
-function game(playerSelection, computerSelection) {
-     for (var i = 0; i < 5; i++) {}
+function game() {
+    let p = 0;
+    let c = 0;
+
+    for (var i = 0; i < 5; i++) {
+        const ps = prompt("Rock, Paper or Scissors?");
+        const cs = getComputerChoice();
+
+        play = playRound(ps, cs);
+
+        switch (play) {
+            case "player loses":
+                c += 1;
+                console.log("You lost!");
+                break;
+            case "player wins":
+                p += 1;
+                console.log("You won!");
+                break;
+            case "tie":
+                p += 1;
+                c += 1;
+                console.log("It's a tie!");
+                break;
+            default:
+                console.log("Invalid selection. Please choose Rock, Paper or Scissors to play.");
+        }
+    }
+
+    console.log("Computer won " + c + " games");
+    console.log("Player won " + p + " games");
+
         //playRound(playerSelection, computerSelection)
 
         //count how many times p and c have won 
@@ -49,8 +79,4 @@ function game(playerSelection, computerSelection) {
 
 }
 
-const ps = prompt("Rock, Paper or Scissors?"); //need to make sure only one of those three options are chosen
-const cs = getComputerChoice();
-
-//console.log(game(ps, cs))
-console.log(playRound(ps, cs));
+console.log(game());
