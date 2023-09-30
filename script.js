@@ -11,14 +11,33 @@ function getComputerChoice(){
 }
 
 function playRound(playerSelection, computerSelection){
-    //p = playerSelection.toLowerCase()
-    //c = computerSelection.toLowerCase()
+    p = playerSelection.toLowerCase();
+    c = computerSelection.toLowerCase();
 
-    // if player && comp === "rock", || if p && c === "paper" || p && c === "scissors" return "tie"
-
-    //else if p === "rock"
-        //if c === "paper" player loses
-        //else if c === "scissors" player wins
+     if (p === c) {
+        return "tie";
+     } else if (p === "rock") {
+        if (c === "paper") {
+            return "player loses";
+        } else { //scissors
+            return "player wins"
+        }
+     } else if (p === "paper") {
+        if (c === "scissors") {
+            return "player loses";
+        } else { //rock
+            return "player wins"
+        }
+     } else if (p === "scissors") {
+            if (c === "paper") {
+                return "player loses";
+            } else { //scissors
+                return "player wins"
+            }
+     } else {
+        return "not a valid entry"
+     }
+       
     //else if p === "paper"
         //if c === "scissors" player loses
         //if c === "rock" player wins
@@ -43,4 +62,4 @@ const ps = prompt("Rock, Paper or Scissors?"); //need to make sure only one of t
 const cs = getComputerChoice();
 
 //console.log(game(ps, cs))
-console.log(ps +" " + cs)
+console.log(playRound(ps, cs));
