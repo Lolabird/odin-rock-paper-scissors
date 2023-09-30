@@ -1,8 +1,13 @@
 function getComputerChoice(){
-    // get random number between 1 and 3
-    // if 1, return "rock"
-    // if 2, return "paper"
-    // if 3, return "scissors"
+    let compAnswer = Math.floor(Math.random() * 3) + 1;
+
+    if (compAnswer === 1) {
+        return "rock";
+    } else if (compAnswer === 2) {
+        return "paper";
+    } else {
+        return "scissors"
+    }
 }
 
 function playRound(playerSelection, computerSelection){
@@ -17,9 +22,11 @@ function playRound(playerSelection, computerSelection){
     //else if p === "paper"
         //if c === "scissors" player loses
         //if c === "rock" player wins
-    //else (p === scissors)
+    //else if p === scissors
         //if c === "rock" player loses
         //if c === "paper" player wins
+    // else
+        //Not a valid entry
 }
 
 function game(playerSelection, computerSelection) {
@@ -32,7 +39,8 @@ function game(playerSelection, computerSelection) {
 
 }
 
-// const ps = prompt("Rock, Paper or Scissors?")
-// const cs = getComputerChoice()
+const ps = prompt("Rock, Paper or Scissors?"); //need to make sure only one of those three options are chosen
+const cs = getComputerChoice();
 
-//console.log(game(ps, cs)) -
+//console.log(game(ps, cs))
+console.log(ps +" " + cs)
