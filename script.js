@@ -76,12 +76,14 @@ function game() {
         let winner = (p > c) ? true : false;
 
         if (winner) {
-            console.log("You won the game " + p + " to " + c + "! Great job!" );
+            return "You won the game " + p + " to " + c + "! Great job!" ;
         } else {
-            console.log("You lost the game " + p + " to " + c + ". Better luck next time!");
+            return "You lost the game " + p + " to " + c + ". Better luck next time!";
         }
+    } else if (c === 0) {
+        return "Uh... I don't think you played the game right. Refresh the page and try that again."
     } else {
-        console.log("Whoa, you tied! Refresh for a rematch!");
+        return "Whoa, you tied! Refresh for a rematch!";
     }
 }
 
