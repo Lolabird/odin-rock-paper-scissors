@@ -15,30 +15,24 @@ function playRound(playerSelection, computerSelection){
     c = computerSelection.toLowerCase();
 
     if (p === c) {
-        console.log("It's a tie!")
+        //console.log("It's a tie!")
         return "tie";
     } else if (p === "rock") {
         if (c === "paper") {
-            console.log("You lose! Paper beats rock.")
             return "player loses";
         } else { //scissors
-            console.log("You win! Rock beats scissors.")
             return "player wins";
         }
     } else if (p === "paper") {
         if (c === "scissors") {
-            console.log("You lose! Scissors beat paper.")
             return "player loses";
         } else { //rock
-            console.log("You win! Paper beats rock.")
             return "player wins";
         }
     } else if (p === "scissors") {
         if (c === "rock") {
-            console.log("You lose! Rock beats scissors.")
             return "player loses";
         } else { //paper
-            console.log("You win! Scissors beat paper.")
             return "player wins";
         }
     } else {
@@ -59,13 +53,14 @@ function game() {
         switch (play) {
             case "player loses":
                 c += 1;
+                console.log("You lose!", cs, " beats", ps, ". You: ", p, "Computer: ", c);
                 break;
             case "player wins":
                 p += 1;
+                console.log("You Win!", ps, " beats", cs, ". You: ", p, "Computer: ", c);
                 break;
             case "tie":
-                p += 0;
-                c += 0;
+                console.log("It's a tie!", " You: ", p, "Computer: ", c);
                 break;
             default:
                 console.log("Invalid selection. Please choose Rock, Paper or Scissors to play.");
