@@ -50,7 +50,7 @@ function game() {
     let p = 0;
     let c = 0;
 
-    for (var i = 0; i < 5; i++) {
+    while (p < 5 && c < 5) {
         const ps = prompt("Rock, Paper, or Scissors?");
         const cs = getComputerChoice();
 
