@@ -1,3 +1,9 @@
+function getPlayerChoice(){
+    let ps = prompt("Rock, Paper, or Scissors?")
+
+    return ps;
+}
+
 function getComputerChoice(){
     let compAnswer = Math.floor(Math.random() * 3) + 1;
 
@@ -45,7 +51,7 @@ function game() {
     let c = 0;
 
     while (p < 5 && c < 5) {
-        const ps = prompt("Rock, Paper, or Scissors?");
+        const ps = getPlayerChoice();
         const cs = getComputerChoice();
 
         play = playRound(ps, cs);
