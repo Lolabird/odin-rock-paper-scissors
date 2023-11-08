@@ -51,8 +51,6 @@ function playRound(playerSelection, computerSelection){
         } else { //paper
             return "player wins";
         }
-    } else {
-        return "not a valid entry";
     }
 }
 
