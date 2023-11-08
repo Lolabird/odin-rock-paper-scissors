@@ -69,15 +69,15 @@ function game() {
             case "player loses":
                 cScore += 1;
                 computer.textContent = cScore;
-                msg.textContent = "You lose! " + cs + " beats " + ps + ". You: " + pScore + " Computer: " + cScore;
+                msg.textContent = "You lose! " + cs + " beats " + ps;
                 break;
             case "player wins":
                 pScore += 1;
                 player.textContent = pScore;
-                msg.textContent = "You lose! " + ps + " beats " + cs + ". You: " + pScore + " Computer: " + cScore;
+                msg.textContent = "You lose! " + ps + " beats " + cs;
                 break;
             default:
-                msg.textContent = "It's a tie! " + "You: " + pScore + " Computer: " + cScore;
+                msg.textContent = "It's a tie! ";
                 break;
         }
     }
@@ -92,8 +92,8 @@ function endGame(){
     let winner = (pScore > cScore) ? true : false; 
 
     if (winner) {
-        msg.textContent = "You won the game " + pScore + " to " + cScore + "! Great job!";
+        msg.textContent = "You won the game! Great job!";
     } else {
-        msg.textContent = "You lost the game " + pScore + " to " + cScore + ". Better luck next time!";
+        msg.textContent = "You lost the game. Better luck next time!";
     }
 }
