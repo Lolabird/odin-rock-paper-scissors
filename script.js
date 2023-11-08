@@ -118,5 +118,5 @@ function resetGame() {
     player.textContent = "0";
     computer.textContent = "0";
     msg.textContent = "";
-    rounds.textContent = "";
+    rounds.textContent = "0";
 }
