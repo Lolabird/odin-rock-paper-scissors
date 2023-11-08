@@ -11,8 +11,8 @@ const computer = document.querySelector("#computer");
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        ps = button.id; // Assign the button's id to the external variable
-        game(); // Start the game when the user makes a choice
+        ps = button.id; 
+        game();
     });
 });
 
