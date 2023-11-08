@@ -1,9 +1,12 @@
 
 let pScore = 0;
 let cScore = 0;
-let ps; // Define the external variable for user's choice
+let ps; 
 const buttons = document.querySelectorAll('button');
 const msg = document.querySelector("#msg");
+const score = document.querySelector("#score");
+const player = document.querySelector("#player");
+const computer = document.querySelector("#computer");
 
 
 buttons.forEach((button) => {
@@ -65,10 +68,12 @@ function game() {
         switch (play) {
             case "player loses":
                 cScore += 1;
+                computer.textContent = cScore;
                 msg.textContent = "You lose! " + cs + " beats " + ps + ". You: " + pScore + " Computer: " + cScore;
                 break;
             case "player wins":
                 pScore += 1;
+                player.textContent = pScore;
                 msg.textContent = "You lose! " + ps + " beats " + cs + ". You: " + pScore + " Computer: " + cScore;
                 break;
             default:
