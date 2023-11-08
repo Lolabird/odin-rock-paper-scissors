@@ -17,7 +17,7 @@ h1{
     justify-content: center;
 }
 
-.button {
+.button, #msg .button {
     width: 200px;
     margin: 5px;
     font-size: 30px;

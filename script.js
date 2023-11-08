@@ -89,10 +89,17 @@ function game() {
 
 function endGame(){
     let winner = (pScore > cScore) ? true : false; 
+    const newGame = document.createElement("button");
+    const newDiv = document.createElement("div");
 
     if (winner) {
         msg.textContent = "You won the game! Great job!";
     } else {
         msg.textContent = "You lost the game. Better luck next time!";
     }
+
+    newGame.textContent = "Play Again?";
+    newGame.classList.add("button");
+    newDiv.appendChild(newGame);
+    msg.appendChild(newDiv);
 }
