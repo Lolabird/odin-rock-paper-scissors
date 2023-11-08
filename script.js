@@ -1,4 +1,16 @@
 
+let pScore = 0;
+let cScore = 0;
+let ps; // Define the external variable for user's choice
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        ps = button.id; // Assign the button's id to the external variable
+        game(); // Start the game when the user makes a choice
+    });
+});
+
 function getComputerChoice(){
     let compAnswer = Math.floor(Math.random() * 3) + 1;
 
@@ -42,22 +54,22 @@ function playRound(playerSelection, computerSelection){
 }
 
 function game() {
-    if (p < 5 && c < 5) {
+    if (pScore < 5 && cScore < 5) {
         const cs = getComputerChoice();
 
         play = playRound(ps, cs);
 
         switch (play) {
             case "player loses":
-                c += 1;
-                console.log("You lose!", cs, " beats", ps, ". You: ", p, "Computer: ", c);
+                cScore += 1;
+                console.log("You lose!", cs, " beats", ps, ". You: ", pScore, "Computer: ", cScore);
                 break;
             case "player wins":
-                p += 1;
-                console.log("You Win!", ps, " beats", cs, ". You: ", p, "Computer: ", c);
+                pScore += 1;
+                console.log("You Win!", ps, " beats", cs, ". You: ", pScore, "Computer: ", cScore);
                 break;
             case "tie":
-                console.log("It's a tie!", " You: ", p, "Computer: ", c);
+                console.log("It's a tie!", " You: ", pScore, "Computer: ", cScore);
                 break;
             default:
                 console.log("Invalid selection. Please choose Rock, Paper or Scissors to play.");
@@ -78,16 +90,3 @@ function game() {
         return "Whoa, you tied! Refresh for a rematch!";
     }
 }
-
-
-let p = 0;
-let c = 0;
-let ps; // Define the external variable for user's choice
-const buttons = document.querySelectorAll('button');
-
-buttons.forEach((button) => {
-    button.addEventListener('click', () => {
-        ps = button.id; // Assign the button's id to the external variable
-        game(); // Start the game when the user makes a choice
-    });
-});
