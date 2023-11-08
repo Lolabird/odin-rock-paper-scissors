@@ -35,7 +35,6 @@ function playRound(playerSelection, computerSelection){
     c = computerSelection.toLowerCase();
 
     if (p === c) {
-        //console.log("It's a tie!")
         return "tie";
     } else if (p === "rock") {
         if (c === "paper") {
@@ -77,7 +76,7 @@ function game() {
                 msg.textContent = "You lose! " + ps + " beats " + cs;
                 break;
             default:
-                msg.textContent = "It's a tie! ";
+                msg.textContent = "It's a tie!";
                 break;
         }
     }
