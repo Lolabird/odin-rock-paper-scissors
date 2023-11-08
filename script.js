@@ -61,19 +61,20 @@ function playRound(playerSelection, computerSelection){
 function game() {
     if (pScore < 5 && cScore < 5) {
         const cs = getComputerChoice();
-
-        play = playRound(ps, cs);
+        const play = playRound(ps, cs);
+        let psCap = ps.charAt(0).toUpperCase() + ps.slice(1);
+        let csCap = cs.charAt(0).toUpperCase() + cs.slice(1);
 
         switch (play) {
             case "player loses":
-                cScore += 1;
+                cScore ++;
                 computer.textContent = cScore;
-                msg.textContent = "You lose! " + cs + " beats " + ps;
+                msg.textContent = "You lose! " + csCap + " beats " + ps + ".";
                 break;
             case "player wins":
-                pScore += 1;
+                pScore ++;
                 player.textContent = pScore;
-                msg.textContent = "You win! " + ps + " beats " + cs;
+                msg.textContent = "You win! " + psCap + " beats " + cs + ".";
                 break;
             default:
                 msg.textContent = "It's a tie!";
