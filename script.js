@@ -2,11 +2,13 @@
 let pScore = 0;
 let cScore = 0;
 let ps; 
+let count = 0;
 const buttons = document.querySelectorAll('button');
 const msg = document.querySelector("#msg");
 const score = document.querySelector("#score");
 const player = document.querySelector("#player");
 const computer = document.querySelector("#computer");
+const rounds = document.querySelector("#rounds");
 
 
 buttons.forEach((button) => {
@@ -80,6 +82,9 @@ function game() {
                 msg.textContent = "It's a tie! You both played " + cs + ".";
                 break;
         }
+
+        count ++;
+        rounds.textContent = count;
     }
 
     if (pScore === 5 || cScore === 5) {
@@ -109,7 +114,9 @@ function endGame() {
 function resetGame() {
     pScore = 0;
     cScore = 0;
+    count = 0;
     player.textContent = "0";
     computer.textContent = "0";
     msg.textContent = "";
+    rounds.textContent = "";
 }
