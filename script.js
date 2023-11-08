@@ -73,7 +73,7 @@ function game() {
             case "player wins":
                 pScore += 1;
                 player.textContent = pScore;
-                msg.textContent = "You lose! " + ps + " beats " + cs;
+                msg.textContent = "You win! " + ps + " beats " + cs;
                 break;
             default:
                 msg.textContent = "It's a tie!";
