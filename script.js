@@ -87,7 +87,7 @@ function game() {
 }
 
 
-function endGame(){
+function endGame() {
     let winner = (pScore > cScore) ? true : false; 
     const newGame = document.createElement("button");
     const newDiv = document.createElement("div");
@@ -100,6 +100,15 @@ function endGame(){
 
     newGame.textContent = "Play Again?";
     newGame.classList.add("button");
+    newGame.addEventListener("click", resetGame);
     newDiv.appendChild(newGame);
     msg.appendChild(newDiv);
+}
+
+function resetGame() {
+    pScore = 0;
+    cScore = 0;
+    player.textContent = "0";
+    computer.textContent = "0";
+    msg.textContent = "";
 }
