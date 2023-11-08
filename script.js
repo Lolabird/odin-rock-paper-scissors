@@ -77,18 +77,19 @@ function game() {
     }
 
     if (pScore === 5 || cScore === 5) {
-        console.log(endGame()); 
+        endGame(); 
     }
 }
 
 
 function endGame(){
-    let winner = (pScore > cScore) ? true : false;
+    const msg = document.querySelector("#msg");
+    const span = document.createElement("span");
+    let winner = (pScore > cScore) ? true : false; 
 
     if (winner) {
-        return "You won the game " + pScore + " to " + cScore + "! Great job!" ;
+        msg.textContent = "You won the game " + pScore + " to " + cScore + "! Great job!" ;
     } else {
-        return "You lost the game " + pScore + " to " + cScore + ". Better luck next time!";
+        msg.textContent = "You lost the game " + pScore + " to " + cScore + ". Better luck next time!";
     }
-
 }
