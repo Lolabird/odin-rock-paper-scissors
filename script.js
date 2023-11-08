@@ -41,20 +41,8 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
-function game(ps) {
-    let p = 0;
-    let c = 0;
-
-    const buttons = document.querySelectorAll('button');
-
-    buttons.forEach((button) => {
-        button.addEventListener('click', () => {
-            console.log(button.id);
-        });
-    });
-
-    while (p < 5 && c < 5) {
-        const ps = getPlayerChoice();
+function game() {
+    if (p < 5 && c < 5) {
         const cs = getComputerChoice();
 
         play = playRound(ps, cs);
@@ -91,4 +79,15 @@ function game(ps) {
     }
 }
 
-console.log(game());
+
+let p = 0;
+let c = 0;
+let ps; // Define the external variable for user's choice
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        ps = button.id; // Assign the button's id to the external variable
+        game(); // Start the game when the user makes a choice
+    });
+});
