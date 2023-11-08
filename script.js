@@ -1,8 +1,3 @@
-function getPlayerChoice(){
-    let ps = prompt("Rock, Paper, or Scissors?")
-
-    return ps;
-}
 
 function getComputerChoice(){
     let compAnswer = Math.floor(Math.random() * 3) + 1;
@@ -46,9 +41,17 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
-function game() {
+function game(ps) {
     let p = 0;
     let c = 0;
+
+    const buttons = document.querySelectorAll('button');
+
+    buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+            console.log(button.id);
+        });
+    });
 
     while (p < 5 && c < 5) {
         const ps = getPlayerChoice();
