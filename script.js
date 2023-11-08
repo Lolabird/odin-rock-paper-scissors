@@ -77,7 +77,7 @@ function game() {
                 msg.textContent = "You win! " + psCap + " beats " + cs + ".";
                 break;
             default:
-                msg.textContent = "It's a tie!";
+                msg.textContent = "It's a tie! You both played " + cs + ".";
                 break;
         }
     }
