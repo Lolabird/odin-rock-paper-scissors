@@ -3,6 +3,7 @@ let pScore = 0;
 let cScore = 0;
 let ps; // Define the external variable for user's choice
 const buttons = document.querySelectorAll('button');
+const msg = document.querySelector("#msg");
 
 
 buttons.forEach((button) => {
@@ -64,14 +65,14 @@ function game() {
         switch (play) {
             case "player loses":
                 cScore += 1;
-                console.log("You lose!", cs, " beats", ps, ". You: ", pScore, "Computer: ", cScore);
+                msg.textContent = "You lose! " + cs + " beats " + ps + ". You: " + pScore + " Computer: " + cScore;
                 break;
             case "player wins":
                 pScore += 1;
-                console.log("You Win!", ps, " beats", cs, ". You: ", pScore, "Computer: ", cScore);
+                msg.textContent = "You lose! " + ps + " beats " + cs + ". You: " + pScore + " Computer: " + cScore;
                 break;
             default:
-                console.log("It's a tie!", " You: ", pScore, "Computer: ", cScore);
+                msg.textContent = "It's a tie! " + "You: " + pScore + " Computer: " + cScore;
                 break;
         }
     }
@@ -83,12 +84,10 @@ function game() {
 
 
 function endGame(){
-    const msg = document.querySelector("#msg");
-    const span = document.createElement("span");
     let winner = (pScore > cScore) ? true : false; 
 
     if (winner) {
-        msg.textContent = "You won the game " + pScore + " to " + cScore + "! Great job!" ;
+        msg.textContent = "You won the game " + pScore + " to " + cScore + "! Great job!";
     } else {
         msg.textContent = "You lost the game " + pScore + " to " + cScore + ". Better luck next time!";
     }
