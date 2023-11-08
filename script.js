@@ -13,7 +13,6 @@ buttons.forEach((button) => {
 });
 
 
-
 function getComputerChoice(){
     let compAnswer = Math.floor(Math.random() * 3) + 1;
 
@@ -25,6 +24,7 @@ function getComputerChoice(){
         return "scissors"
     }
 }
+
 
 function playRound(playerSelection, computerSelection){
     p = playerSelection.toLowerCase();
@@ -56,6 +56,7 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
+
 function game() {
     if (pScore < 5 && cScore < 5) {
         const cs = getComputerChoice();
@@ -84,18 +85,14 @@ function game() {
     }
 }
 
-function endGame(){
-    if (pScore !== cScore) {
-        let winner = (pScore > cScore) ? true : false;
 
-        if (winner) {
-            return "You won the game " + pScore + " to " + cScore + "! Great job!" ;
-        } else {
-            return "You lost the game " + pScore + " to " + cScore + ". Better luck next time!";
-        }
-    } else if (cScore === 0) {
-        return "Uh... I don't think you played the game right. Refresh the page and try that again."
+function endGame(){
+    let winner = (pScore > cScore) ? true : false;
+
+    if (winner) {
+        return "You won the game " + pScore + " to " + cScore + "! Great job!" ;
     } else {
-        return "Whoa, you tied! Refresh for a rematch!";
+        return "You lost the game " + pScore + " to " + cScore + ". Better luck next time!";
     }
+
 }
