@@ -4,12 +4,15 @@ let cScore = 0;
 let ps; // Define the external variable for user's choice
 const buttons = document.querySelectorAll('button');
 
+
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         ps = button.id; // Assign the button's id to the external variable
         game(); // Start the game when the user makes a choice
     });
 });
+
+
 
 function getComputerChoice(){
     let compAnswer = Math.floor(Math.random() * 3) + 1;
@@ -76,15 +79,21 @@ function game() {
         }
     }
 
-    if (p !== c) {
-        let winner = (p > c) ? true : false;
+    if (pScore === 5 || cScore === 5) {
+        console.log(endGame()); 
+    }
+}
+
+function endGame(){
+    if (pScore !== cScore) {
+        let winner = (pScore > cScore) ? true : false;
 
         if (winner) {
-            return "You won the game " + p + " to " + c + "! Great job!" ;
+            return "You won the game " + pScore + " to " + cScore + "! Great job!" ;
         } else {
-            return "You lost the game " + p + " to " + c + ". Better luck next time!";
+            return "You lost the game " + pScore + " to " + cScore + ". Better luck next time!";
         }
-    } else if (c === 0) {
+    } else if (cScore === 0) {
         return "Uh... I don't think you played the game right. Refresh the page and try that again."
     } else {
         return "Whoa, you tied! Refresh for a rematch!";
