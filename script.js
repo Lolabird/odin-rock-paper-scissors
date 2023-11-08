@@ -70,11 +70,9 @@ function game() {
                 pScore += 1;
                 console.log("You Win!", ps, " beats", cs, ". You: ", pScore, "Computer: ", cScore);
                 break;
-            case "tie":
+            default:
                 console.log("It's a tie!", " You: ", pScore, "Computer: ", cScore);
                 break;
-            default:
-                console.log("Invalid selection. Please choose Rock, Paper or Scissors to play.");
         }
     }
 
