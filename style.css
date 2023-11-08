@@ -1,9 +1,5 @@
-*{
-    outline: 2px, solid, yellow;
-}
-
 body {
-    background: rgb(151, 123, 137);
+    background: rgb(187, 151, 145);
     color: #eee;
     text-align: center;
 }
