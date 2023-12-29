@@ -1,11 +1,28 @@
 body {
-    background: rgb(221, 125, 104);
+    background-image: url("./images/paper-5985445_1920.jpg");
+    background-size: cover;
+    background-color: rgb(221, 125, 104);
     color: #eee;
     text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    flex: 0 0 auto;
 }
 
 h1{
     font-size: 50px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .buttons {
@@ -40,4 +57,8 @@ h1{
 
 #msg .button {
     margin-top: 30px;
+}
+
+footer {
+    flex: 0 0 auto;
 }
