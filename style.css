@@ -32,8 +32,30 @@ main {
 
 .button {
     width: 200px;
+    height: 200px;
     margin: 5px;
     font-size: 30px;
+}
+
+#rock {
+    background-image: url("./images/rocks-576653_640.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#paper {
+    background-image: url("./images/certificate-154169_640.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+#scissors {
+    background-image: url("./images/school-1555907_640.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
 }
 
 .score {
