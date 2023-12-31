@@ -37,6 +37,13 @@ main {
     font-size: 30px;
 }
 
+.replay-button {
+    width: 200px;
+    height: auto;
+    margin: 5px;
+    font-size: 30px;
+}
+
 #rock {
     background-image: url("./images/rocks-576653_640.png");
     background-size: cover;

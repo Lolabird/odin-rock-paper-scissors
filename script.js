@@ -105,7 +105,7 @@ function endGame() {
     }
 
     newGame.textContent = "Play Again?";
-    newGame.classList.add("button");
+    newGame.classList.add("replay-button");
     newGame.addEventListener("click", resetGame);
     newDiv.appendChild(newGame);
     msg.appendChild(newDiv);
