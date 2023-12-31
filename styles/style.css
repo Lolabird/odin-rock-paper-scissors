@@ -1,5 +1,5 @@
 body {
-    background-image: url("./images/paper-5985445_1920.jpg");
+    background-image: url("../images/paper-5985445_1920.jpg");
     background-size: cover;
     background-color: rgb(221, 125, 104);
     color: #eee;
@@ -45,21 +45,21 @@ main {
 }
 
 #rock {
-    background-image: url("./images/rocks-576653_640.png");
+    background-image: url("../images/rocks-576653_640.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 #paper {
-    background-image: url("./images/certificate-154169_640.png");
+    background-image: url("../images/certificate-154169_640.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position-x: center;
 }
 
 #scissors {
-    background-image: url("./images/school-1555907_640.png");
+    background-image: url("../images/school-1555907_640.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position-x: center;
