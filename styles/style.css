@@ -1,7 +1,7 @@
 body {
     background-image: url("../images/paper-5985445_1920.jpg");
     background-size: cover;
-    background-color: rgb(221, 125, 104);
+    background-color: rgb(138, 138, 138);
     color: #fff;
     text-align: center;
     height: 100vh;
@@ -39,7 +39,8 @@ button {
     font-family: "Purisa", cursive;
     font-size: 30px;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(233, 233, 233, 0.973)
+    text-shadow: 2px 2px 4px rgba(233, 233, 233, 0.973);
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
 }
 
 .button {
