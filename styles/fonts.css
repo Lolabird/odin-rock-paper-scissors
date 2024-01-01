@@ -1,5 +1,14 @@
 @font-face {
-    font-family: "Purisa-Bold";
+     font-family: "Purisa";
+     src: url("../fonts/Purisa.ttf") format("truetype"),
+          url("../fonts/Purisa.woff") format("woff"),
+          url("../fonts/Purisa.woff2") format("woff2");
+     font-weight: 400;
+     font-style: normal;
+ }
+
+@font-face {
+    font-family: "Purisa";
     src: url("../fonts/Purisa-Bold.ttf") format("truetype"),
          url("../fonts/Purisa-Bold.woff") format("woff"),
          url("../fonts/Purisa-Bold.woff2") format("woff2");
@@ -8,29 +17,19 @@
   }
   
 @font-face {
-    font-family: "Purisa-BoldOblique";
-    src: url("../fonts/Purisa-BoldOblique.ttf") format("truetype"),
-         url("../fonts/Purisa-BoldOblique.woff") format("woff"),
-         url("../fonts/Purisa-BoldOblique.woff2") format("woff2");
-    font-weight: 700;
-    font-style: oblique;
-}
-  
-@font-face {
-    font-family: "Purisa-Oblique";
+    font-family: "Purisa";
     src: url("../fonts/Purisa-Oblique.ttf") format("truetype"),
          url("../fonts/Purisa-Oblique.woff") format("woff"),
          url("../fonts/Purisa-Oblique.woff2") format("woff2");
     font-weight: 400;
     font-style: oblique;
 }
-  
+
 @font-face {
-    font-family: "Purisa";
-    src: url("../fonts/Purisa.ttf") format("truetype"),
-         url("../fonts/Purisa.woff") format("woff"),
-         url("../fonts/Purisa.woff2") format("woff2");
-    font-weight: 400;
-    font-style: normal;
-}
-  
+     font-family: "Purisa";
+     src: url("../fonts/Purisa-BoldOblique.ttf") format("truetype"),
+          url("../fonts/Purisa-BoldOblique.woff") format("woff"),
+          url("../fonts/Purisa-BoldOblique.woff2") format("woff2");
+     font-weight: 700;
+     font-style: oblique;
+ }
